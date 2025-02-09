@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados da Eleição</h1>
+        <div id="results"></div>
+        <!-- <button onclick="window.location.href='index.html'">Voltar para Votação</button> -->
+    </div>
+
+    <script>
+        // Busca e exibe os resultados ao carregar a página
+        window.onload = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/results');
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                document.getElementById('results').textContent = "Erro ao buscar resultados.";
+            }
+        };
+
+        function displayResults(data) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = "";
+
+            for (const [candidate, info] of Object.entries(data)) {
+                resultsDiv.innerHTML += `
+                    <div class="result-item">
+                        <h3>${info.name}</h3>
+                        <p>Votos: ${info.votes}</p>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

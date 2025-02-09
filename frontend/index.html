@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Votação</h1>
+        <form id="voteForm">
+            <label for="voterId">ID do Votante:</label>
+            <input type="text" id="voterId" name="voterId" required>
+            
+            <label for="candidateNumber">Número do Candidato:</label>
+            <input type="text" id="candidateNumber" name="candidateNumber" required>
+            
+            <button type="submit">Votar</button>
+        </form>
+        <p id="message"></p>
+
+        <!-- Botão para ir para a tela de resultados -->
+        <button onclick="window.location.href='results.html'">Ver Resultados</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
