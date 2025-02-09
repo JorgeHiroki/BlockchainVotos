@@ -9,6 +9,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 ### 📋 Pré-requisitos
 
 Para conseguir utilizar esse projeto, você precisa possuir o *Docker Desktop* instalado. Para instalá-lo é só seguir a [documentação de instalação do *Docker*](https://docs.docker.com/get-started/get-docker/).
+Além disso, também é necessário possuir instalado o Python em versão 3.9 ou mais recente. Para instalá-lo é só seguir a [documentação de instalação do *Python*](https://docs.python.org/3/).
 
 ### 🔧 Instalação
 
